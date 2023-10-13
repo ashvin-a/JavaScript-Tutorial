@@ -1,0 +1,38 @@
+:root{
+    row : "4";
+
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.main{
+    display: flex;
+    color: black;
+    flex-direction: column;
+}
+
+.heading{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+table {
+    /* display: inline-block; */
+    margin: 10px;
+    border: 0.25px solid rgb(0, 0, 0);
+    margin: 1rem auto;
+    position: absolute;
+    left: 30px;
+    /* overflow-x: scroll ; */
+
+  }
+tr{
+    height: 100px;
+    width: ;
+}
+td{
+    width: 100px;
+}
