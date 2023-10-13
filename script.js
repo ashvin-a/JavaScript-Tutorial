@@ -1,42 +1,40 @@
 
 
-const div = document.querySelector("main");
-alert(div.innerHTML)
+// const div = document.querySelector("main");
+// alert(div.innerHTML) //!This aint workin!
 
 
 function generateTable() {
-    // creates a <table> element and a <tbody> element
-    const tbl = document.createElement("table");
-    const tblBody = document.createElement("tbody");
-  
 
-    var row = document.getElementById("rows").value;
-    var column = document.getElementById("columns").value;
+  const tbl = document.createElement("table");
+  const tblBody = document.createElement("tbody");
 
-    // creating all cells
-    for (let i = 0; i < row; i++) {
-      // creates a table row
-      const row = document.createElement("tr");
-  
-      for (let j = 0; j < column; j++) {
-        // Create a <td> element and a text node, make the text
-        // node the contents of the <td>, and put the <td> at
-        // the end of the table row
-        const cell = document.createElement("td");
-        const cellText = document.createTextNode("");
-        cell.appendChild(cellText);
-        row.appendChild(cell);
-      }
-  
-      // add the row to the end of the table body
-      tblBody.appendChild(row);
+  var row = document.getElementById("rows").value;
+  var column = document.getElementById("columns").value;
+
+  // creating all cells
+  for (let i = 0; i < row; i++) {
+    // creates a table row
+    const row = document.createElement("tr");
+
+    for (let j = 0; j < column; j++) {
+      // Create a <td> element and a text node, make the text
+      // node the contents of the <td>, and put the <td> at
+      // the end of the table row
+      const cell = document.createElement("td");
+      const cellText = document.createTextNode(`aksdjlaskjlaksj`);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
     }
-  
-    // put the <tbody> in the <table>
-    tbl.appendChild(tblBody);
-    // appends <table> into <body>
-    document.body.appendChild(tbl);
-    // sets the border attribute of tbl to '2'
-    tbl.setAttribute("border", "1");
+
+    // add the row to the end of the table body
+    tblBody.appendChild(row);
   }
-  
+
+  // put the <tbody> in the <table>
+  tbl.appendChild(tblBody);
+  // appends <table> into <body>
+  document.body.appendChild(tbl);
+  // sets the border attribute of tbl to '2'
+  tbl.setAttribute("border", "1");
+}

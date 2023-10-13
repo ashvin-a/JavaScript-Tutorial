@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
     <script src="tutorial.js"></script>
 </head>
 
@@ -16,9 +16,15 @@
             This is a test sample.
         </div>
         <div class="form">
-            <input type="number" id="rows"><br>
-            <input type="number" id="columns"><br>
-            <input type="button" value="Generate table" onclick="generateTable()" />
+            <form action="" autocomplete="off">
+                <label for="username">Enter Username :</label>
+                <input type="text" id="username"><br>
+                <label for="user-mail">Enter Mail :</label>
+                <input type="email" id="user-mail"><br>
+                <label for="password">Enter Password :</label>
+                <input type="password" id="password"><br>
+                <input type="submit" value="Submit" onclick="credValidate()" />
+            </form>
         </div>
     </div>
 </body>

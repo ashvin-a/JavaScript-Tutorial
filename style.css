@@ -1,19 +1,19 @@
-:root{
+/* :root{
     row : "4";
 
 
-}
+} */
 
 *{
     margin: 0px;
     padding: 0px;
 }
 
-.main{
+/* .main{
     display: flex;
     color: black;
     flex-direction: column;
-}
+} */
 
 .heading{
     font-family: 'Times New Roman', Times, serif;
@@ -21,18 +21,20 @@
 }
 table {
     /* display: inline-block; */
-    margin: 10px;
+    /* margin: 10px; */
     border: 0.25px solid rgb(0, 0, 0);
-    margin: 1rem auto;
-    position: absolute;
-    left: 30px;
-    /* overflow-x: scroll ; */
+    margin: 0.5rem auto;
+    margin: 10px 20px;;
 
+    /* position: absolute; */
+    /* left: 30px; */
+    /* width: fit-content */
+    /* overflow-x: scroll ; */
   }
 tr{
     height: 100px;
-    width: ;
+    /* width: ; */
 }
-td{
+/* td{
     width: 100px;
-}
+} */

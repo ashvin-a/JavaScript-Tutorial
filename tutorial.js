@@ -1,4 +1,17 @@
+function credValidate(){
 
+    let name=document.getElementById("username").value;
+    let mail=document.getElementById("user-mail").value;
+    let password=document.getElementById("password").value; 
+    
+    if(password.length > 10){
+        return(alert("Strong aanee💪"),alert(name + " added to database"))
+    }else{
+        return(alert("Yowai mo🤡"))
+    }
+}
+
+// passwordValidate("aklsjla")
 // ! This sh*t is deep
 // var naani = function (arg1) {
 //   if (arg1 === "Ashvin") {
