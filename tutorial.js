@@ -1,15 +1,29 @@
-function credValidate(){
+var num = 10;
 
-    let name=document.getElementById("username").value;
-    let mail=document.getElementById("user-mail").value;
-    let password=document.getElementById("password").value; 
+function smallscope(){
+    bleh = 69;
     
-    if(password.length > 10){
-        return(alert("Strong aanee💪"),alert(name + " added to database"))
-    }else{
-        return(alert("Yowai mo🤡"))
-    }
 }
+function scope(){
+    console.log(num)
+    console.log(bleh)
+
+}
+smallscope()
+scope()
+// !Validates Credentials entered in form
+// function credValidate(){
+
+//     let name=document.getElementById("username").value;
+//     let mail=document.getElementById("user-mail").value;
+//     let password=document.getElementById("password").value; 
+    
+//     if(password.length > 10){
+//         return(alert("Strong aanee💪"),alert(name + " added to database"))
+//     }else{
+//         return(alert("Yowai mo🤡"))
+//     }
+// }
 
 // passwordValidate("aklsjla")
 // ! This sh*t is deep
