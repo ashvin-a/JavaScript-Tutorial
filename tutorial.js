@@ -1,4 +1,16 @@
 // !Object Literals
+
+// obj1 = {
+//     a: 1,
+//     b:2,c:3
+// }
+// obj2 = {
+//     d: 4,
+//     e: 5,
+//     f: 6
+// }
+// obj3 = { ...obj1, ...obj2 }//Neat!
+// console.log(obj3)
 // const person = {
 //     name: 'Ashvin',
 //     place: 'Kazhak',
