@@ -1,5 +1,72 @@
-// !Object Literals
+// !CHallenge #5
 
+const library = [
+    {
+        title: 'ABC',
+        author: 'blah',
+        status: {
+            own: true,
+            reading: false,
+            read: false,
+        },
+    },
+    {
+        title: 'DEF',
+        author: 'bleh',
+        status: {
+            own: true,
+            reading: false,
+            read: false,
+        },
+    },
+    {
+        title: 'GHI',
+        author: 'bluh',
+        status: {
+            own: true,
+            reading: false,
+            read: false,
+        },
+    },
+];
+
+library[0].status.read = true;
+library[1].status.read = true;
+library[2].status.read = true;
+
+const { title: firstbook } = library[0];
+console.log(firstbook);
+// !JSON
+// const post = {
+//     id: '1',
+//     name: 'Ashvin',
+//     place: 'Kazhak',
+//     time: '23:37hrs'
+// }
+
+// jsoned = JSON.stringify(post)
+// console.log(jsoned)
+
+// parsed = JSON.parse(jsoned)
+// console.log(parsed)
+// ! Destructuring
+// const obj = {
+//     field1: 'value1',
+//     field2: 'value2',
+//     field3: 'value3',
+// };
+
+// const { field1,field2,field3 } = obj
+// console.log(field2)
+
+// !Object Literals
+// const blah = 30
+// const bleh = 32
+// const blih = 34
+// const obj = {
+//     blah,bleh,blih
+// }
+// console.log(obj.bleh)
 // obj1 = {
 //     a: 1,
 //     b:2,c:3
@@ -23,7 +90,7 @@
 //     array: [1, 2, 3, 4],
 // };
 // person.dosomethin = function () {
-//     console.log(`Im ${this.name} and Im from ${this.place} situated at 
+//     console.log(`Im ${this.name} and Im from ${this.place} situated at
 //     ${this.address.street}, ${this.address.house}, ${this.address.city}`);
 // };
 // person.dosomethin();
