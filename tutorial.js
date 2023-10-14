@@ -1,23 +1,66 @@
-var num = 10;
 
-function smallscope(){
-    bleh = 69;
+//! Some cool functions to use on strings
+// .log(s)
+
+// x = str.toUpperCase()
+// console.log(x)
+
+// x = str.toLowerCase()
+// console.log(x)
+
+// x = str.charAt(0)
+// console.log(x)
+
+// x = str.indexOf("T")
+// console.log(x)
+
+// x = str.substring(0,6)
+// console.log(x)
+
+// x = str.slice(-3,-1)
+// console.log(x)
+
+// x = str.split("")
+// console.log(x)
+
+// x = 2 == 2
+// console.log(x)
+
+// function bleh() {
     
-}
-function scope(){
-    console.log(num)
-    console.log(bleh)
+// }
 
-}
-smallscope()
-scope()
+let str = "Hey There!"
+s = new String(str)
+console.log(s)
+console.log(s[9])
+xed = str.__proto__;
+console
+//!Started the 36hrs course 🫠
+// var num = 10;
+// var nem = "6969"
+// nem = parseInt(nem) // OR +nem OR Number()
+// console.log(typeof (nem))
+// num = num.toString()
+// console.log(typeof num)
+
+// function smallscope() {
+//     bleh = 69;
+// }
+// function scope() {
+//     console.log(num);
+//     console.log(bleh);
+//     console.log("Surprise")
+// }
+// smallscope();
+// scope();
 // !Validates Credentials entered in form
 // function credValidate(){
 
 //     let name=document.getElementById("username").value;
 //     let mail=document.getElementById("user-mail").value;
-//     let password=document.getElementById("password").value; 
-    
+//     let password=document.getElementById("password").value;
+
 //     if(password.length > 10){
 //         return(alert("Strong aanee💪"),alert(name + " added to database"))
 //     }else{
@@ -42,7 +85,6 @@ scope()
 // let output=naani("Ashvin");//this is arg1
 // output("")//here we give arg2
 
-
 // ! This is something to look at!
 // function test(bleh){
 //   bleh("wpwoeipoi")
@@ -51,7 +93,6 @@ scope()
 // test(function(arg){
 //   alert("message "+ arg)
 // });
-
 
 // !How to use ? operator (scene saadanam)
 // num = 11
@@ -92,7 +133,7 @@ scope()
 // document.querySelector("html").addEventListener("click", function () {
 // //     alert("Ouch! Stop poking me!");
 // //   });
-// alert() 
+// alert()
 
 // var password="lsakdjflkdjfa"
 // let num=5
@@ -105,7 +146,7 @@ scope()
 // function passwordValidate(password){
 //     while(password){
 //         return(alert("Password entered"))
-        
+
 //         // if(password.)
 //     }
 // }
