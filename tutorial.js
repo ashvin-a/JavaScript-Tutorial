@@ -1,4 +1,49 @@
+// !Object Literals
+// const person = {
+//     name: 'Ashvin',
+//     place: 'Kazhak',
+//     hobbies: 'typing blah',
+//     address: {
+//         street: 'blah',
+//         house: 'bleh',
+//         city: 'kazhak',
+//     },
+//     array: [1, 2, 3, 4],
+// };
+// person.dosomethin = function () {
+//     console.log(`Im ${this.name} and Im from ${this.place} situated at 
+//     ${this.address.street}, ${this.address.house}, ${this.address.city}`);
+// };
+// person.dosomethin();
+// delete person.place
+// console.log(person);
+// !Challenge #4
+// let x = [1, 2, 3, 4, 5];
+// let y = [5, 6, 7, 8, 9, 10];
+// wew = [...x, ...y]
+// wew.splice(4,1)
+// console.log(wew)
+// !Challenge #3
+// let x = [1, 2, 3, 4, 5];
+// x.push(6)
+// x.unshift(0)
+// console.log(x.reverse())
+
 //! more of arrays
+// let arr1 = ['apple', 'ball', 'cat', 'dog']
+// let arr2 = ['eleph', 'fish', 'gorilla', 'ice']
+
+// arr1.push(arr2)
+// arr1=arr1.concat(arr2)
+// x=[...arr1,...arr2]// Spread operator 🥪
+// console.log(x)
+
+//Flatten arrays
+// const arr = [1, 2, [3, 4, 5, [6, 7, [8, 9]]], 10]
+// x=arr.flat(3)
+// console.log(x)
+// x = Array.from(1234)
+// console.log(x)
 // let ar = ['blah', 'bleh', 'blooh', 'bluuh'];
 // x = ar.length;
 
@@ -8,7 +53,7 @@
 // ar.shift();
 // ar.reverse();
 // console.log(ar.includes('blah'))
-// // slice and splice
+// slice and splice
 // console.log(ar);
 //!DateTimeFormat API
 // let d = new Date();
@@ -64,7 +109,7 @@
 //! Exercise
 // var str = "blah"
 // array = str.charAt(0).toUpperCase()+str.slice(1)
-// // newstr = array.
+// newstr = array.
 // console.log(array)
 // bleh.charAt(0) = bleh.charAt(0).toUpperCase()
 //! Some cool functions to use on strings
@@ -165,7 +210,7 @@
 // !How to use ? operator (scene saadanam)
 // num = 11
 // var output = (num%2===0)? IfTrue():IfFalse();
-// // alert(output)
+// alert(output)
 
 // function IfTrue(){
 //   return(alert("Trueee aneeeeee"))
@@ -184,7 +229,7 @@
 //   } else {
 //     myImage.setAttribute("src", "images/dfe6ff10-19ca-11ee-8d5b-8f954b8ec342.gif");
 //   }
-// // };
+// };
 // !How to use functions
 // function doSomething(x) {
 //   alert(x); // ReferenceError: x is not defined
@@ -199,23 +244,23 @@
 // doSomething(10)
 // !Some bs that wont work in Chrome.
 // document.querySelector("html").addEventListener("click", function () {
-// //     alert("Ouch! Stop poking me!");
-// //   });
+//     alert("Ouch! Stop poking me!");
+//   });
 // alert()
 
 // var password="lsakdjflkdjfa"
 // let num=5
-// // if (num==5){
-// //     alert("its fiv alright "+password)
-// // }else{
-// //     alert("Somethin else")
-// // }
+// if (num==5){
+//     alert("its fiv alright "+password)
+// }else{
+//     alert("Somethin else")
+// }
 
 // function passwordValidate(password){
 //     while(password){
 //         return(alert("Password entered"))
 
-//         // if(password.)
+// if(password.)
 //     }
 // }
 
