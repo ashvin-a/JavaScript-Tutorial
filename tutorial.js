@@ -1,41 +1,312 @@
-// !CHallenge #5
+//!DOM.....the rest will be continued in script.js
 
-const library = [
-    {
-        title: 'ABC',
-        author: 'blah',
-        status: {
-            own: true,
-            reading: false,
-            read: false,
-        },
-    },
-    {
-        title: 'DEF',
-        author: 'bleh',
-        status: {
-            own: true,
-            reading: false,
-            read: false,
-        },
-    },
-    {
-        title: 'GHI',
-        author: 'bluh',
-        status: {
-            own: true,
-            reading: false,
-            read: false,
-        },
-    },
-];
+console.log(document.links[0])
 
-library[0].status.read = true;
-library[1].status.read = true;
-library[2].status.read = true;
+// document.body.innerHTML = '<h1>I changed it lol</h1>'
 
-const { title: firstbook } = library[0];
-console.log(firstbook);
+
+//! Challenge#8
+// const array = ['hey', 'there', 'big', 'guy']
+
+// const capitalise = array.forEach(function (word) {
+//     console.log(word.charAt(0).toUpperCase()+word.slice(1))
+// })
+
+// const array = [2, -3, 5, -9, 1, -4, 7, 8]
+
+// const positive = array.filter(x => x > 0).reduce((acc,curr)=>acc+curr)
+// console.log(positive)
+
+
+
+// const people = [
+//     {
+//         firstname: 'dwayne',
+//         lastname: 'johnson',
+//         email: 'therock@gmail.com',
+//         age:45
+    
+//     },
+//     {
+//         firstname: 'john',
+//         lastname: 'wick',
+//         email: 'johnwick@gmail.com',
+//         age:35
+    
+//     },
+//     {
+//         firstname: 'harry',
+//         lastname: 'potter',
+//         email: 'harrypotter@gmail.com',
+//         age:25
+    
+//     },
+//     {
+//         firstname: 'peter',
+//         lastname: 'parker',
+//         email: 'peterparker@gmail.com',
+//         age:23
+    
+//     },
+//     {
+//         firstname: 'gwen',
+//         lastname: 'stacy',
+//         email: 'gwenstacy@gmail.com',
+//         age:22
+    
+//     },
+// ]
+
+// const youngppl = people.filter(pp => pp.age < 30) //! Look how map is used
+//     .map(pp => ({
+//         name: pp.firstname + ' ' + pp.lastname,
+//         email: pp.email,
+            
+// }))
+// console.log(youngppl)
+
+//! Map
+
+// const arra = [1, 2, 3, 4, 5, 6];
+// const map = arra.map((x) => x * 2);
+// console.log(map)
+
+// const arra2 = ['asd','qwe','rtyrty','mxmcvz'];
+// const map2 = arra2.map((y) =>y+'ajsl');
+// console.log(map2)
+
+//! Filter
+// const arra = [1, 2, 3, 4, 5, 6, 7];
+// // const evenArra = arra.filter(function (num) {
+// //     if (num % 2 === 0) return console.log(num);
+// // }); OR
+// const evenArra = arra.filter(num => num % 2 === 0);
+// console.log(evenArra)
+
+// const company = [
+//     {name:'blah0',category:'finance',start:'1981',end:'2380'},
+//     {name:'blah2',category:'retail',start:'1981',end:'2380'},
+//     {name:'blah3',category:'auto',start:'1981',end:'2380'},
+//     {name:'blah4',category:'retail',start:'1981',end:'2380'},
+//     {name:'blah5',category:'finance',start:'1981',end:'2380'},
+//     {name:'blah6',category:'auto',start:'1981',end:'2380'},
+//     {name:'blah7',category:'finance',start:'1981',end:'2380'},
+// ]
+
+// const compaFilter = company.filter(com => com.category === 'retail')
+// console.log(compaFilter)
+
+//!ForEach
+// const arra = ['nl', 'wpeoi', 'xcbmb', 'qwuie']
+
+// function callit(item) {
+//     console.log(item)
+// }
+// arra.forEach(callit)// Remember to not put () inside forEach
+
+// console.log(arra)
+
+//! For in loop
+// const obj = (
+//     {
+//         id: '23',
+//         name: 'Adhv',
+//         pla: 'dlksjf'
+//     }
+// );
+// for (item in obj) {
+//     console.log(item,obj[item])
+// }
+
+// const array = ['red', 'blah', 'dlkfjsdf', 'aowiqpw', 'mncxbz']
+
+// for (const key in array) {
+//     console.log(array[key])
+// }
+
+//! For of loop
+// const items = ['bana', 'apple', 'cat', 'doggo']
+
+// for (item of items) {
+//     console.log(item)
+// }
+// !Map in JS
+// const map = new Map()
+// map.set('name', 'Ash')
+// map.set('age', '420')
+
+// for (item of map) {
+//     console.log(item)
+// }
+// console.log(map)
+
+//! Use for loop while no of iterations is known.
+//! Use while loop while no of iterations is unknown.
+
+// const arry = [1, 2, 3, 4];
+// let i=0
+// while (i < arry.length) {
+//     console.log(arry[i]);
+//     i++;
+// }
+//! Falsey values
+// false,"",'',0,null,NaN,undefined
+
+//! Challenge#7
+// function calculator(num1, num2, operate) {
+//     let out
+//     switch (operate) {
+//         case '+':{
+//             out = num1 + num2
+//             break;
+//         }
+//         case '-': {
+//             out = num1 - num2
+//             break;
+
+//         }
+//         case '*': {
+//             out=num1*num2
+//             break;
+//         }
+//         case '/': {
+//             out=num1/num2
+//             break;
+//         }
+
+//         default: {
+//             out = 'Invalid operator'
+//             break
+//         }
+
+//     }
+//     return out
+// }
+// console.log(calculator(69,420,'/'))
+//! Challenge#6
+// const getCelsius = (faren) => ((faren - 32) * 5) / 9;
+// console.log(getCelsius());
+
+// const minMax = (...numbers) => ` Min is ${Math.min(...numbers)}. Max is ${Math.max(...numbers)}`;
+// console.log(minMax(1, 2, 3, 4, 5))
+
+// ((length, width) =>{
+//         const area = length * width;
+//         const out = `Area is ${area}`
+//         console.log(out)
+//     })
+//    (94,6)
+//! Immediately invoke functions
+
+// (function () {
+//     console.log('Somethin inside');
+//     const hello = () => console.log('somethin cookin');
+//     hello();
+// })();
+
+// hello();
+//! Arrow Functions
+// const add = (a,b) => a+b
+// console.log(add(1, 2))
+
+// const obj = () => ([
+//     {id: 1,
+//     name: 'Ash',
+//     place: 'Kazhak',},
+//     {id: 2,
+//     name: 'Bash',
+//     place: 'Lazhak',
+//     }
+// ])
+// console.log(obj()[1].id)
+// !2 ways of calling a function
+// function sample1(para) {
+//     return para + ' aane';
+// }
+
+// console.log(sample1('blah'));
+
+// const sample2 = function (para) {
+//     return para + ' alla';
+// };
+
+// console.log(sample2('blah'))
+// !Var is function scoped but not block scoped!!
+// if (true) {
+//     const a = 100
+//     let b = 200
+//     var c = 300
+// }
+
+// console.log(c)
+
+// function blah() {
+//     const d = 100
+//     let e = 200
+//     var f = 300
+// }
+// console.log(f)
+
+// !Default & Rest parameters
+// function blah(para="bot") {
+//     return(para +" is typing")
+// }
+
+// console.log(blah())
+
+// function rest(...numbers) {
+//     total = 0
+// for (i = 0; i < numbers.length; i++){
+//     total+=numbers[i]
+// } OR
+//     for (const num of numbers) {//! use OF
+//         total+=num
+//     }
+//     return total
+// }
+
+// console.log(rest(1,2,3,4,5,6))
+// !Challenge #5
+
+// const library = [
+//     {
+//         title: 'ABC',
+//         author: 'blah',
+//         status: {
+//             own: true,
+//             reading: false,
+//             read: false,
+//         },
+//     },
+//     {
+//         title: 'DEF',
+//         author: 'bleh',
+//         status: {
+//             own: true,
+//             reading: false,
+//             read: false,
+//         },
+//     },
+//     {
+//         title: 'GHI',
+//         author: 'bluh',
+//         status: {
+//             own: true,
+//             reading: false,
+//             read: false,
+//         },
+//     },
+// ];
+
+// library[0].status.read = true;
+// library[1].status.read = true;
+// library[2].status.read = true;
+
+// const { title: firstbook } = library[0];
+
+// json_lib = JSON.stringify(library);
+
+// console.log(json_lib);
 // !JSON
 // const post = {
 //     id: '1',

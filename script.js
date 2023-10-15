@@ -1,40 +1,31 @@
+//! DOM selectors
+
+console.log(document.getElementById('main'))
+console.log(document.getElementById('main').getAttribute('class'))
+
+document.getElementById('main').id = 'mein'
+document.getElementById('mein').setAttribute('class','buhahahaha')
 
 
-// const div = document.querySelector("main");
-// alert(div.innerHTML) //!This aint workin!
 
 
-function generateTable() {
+// let output
+// output = document.all
 
-  const tbl = document.createElement("table");
-  const tblBody = document.createElement("tbody");
 
-  var row = document.getElementById("rows").value;
-  var column = document.getElementById("columns").value;
+// output = document.head
+// output = document.body
+// output=document.links
+// console.log(output)
+// output = document.links[0].className = 'blehbleh'
 
-  // creating all cells
-  for (let i = 0; i < row; i++) {
-    // creates a table row
-    const row = document.createElement("tr");
 
-    for (let j = 0; j < column; j++) {
-      // Create a <td> element and a text node, make the text
-      // node the contents of the <td>, and put the <td> at
-      // the end of the table row
-      const cell = document.createElement("td");
-      const cellText = document.createTextNode(`aksdjlaskjlaksj`);
-      cell.appendChild(cellText);
-      row.appendChild(cell);
-    }
 
-    // add the row to the end of the table body
-    tblBody.appendChild(row);
-  }
 
-  // put the <tbody> in the <table>
-  tbl.appendChild(tblBody);
-  // appends <table> into <body>
-  document.body.appendChild(tbl);
-  // sets the border attribute of tbl to '2'
-  tbl.setAttribute("border", "1");
-}
+//! DOM 
+// console.log(document.getElementById('main'))
+
+// const main = document.getElementById('main')
+// // main.innerHTML = '<h1>We changed it via js</h1>'
+
+// document.querySelector('#main h1').innerText = 'Helloo'
