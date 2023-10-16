@@ -1,24 +1,62 @@
-//! setinterval and clearinterval
+//! Callbacks
 
-const startbtn = document.querySelector('.submit')
-const stopbtn = document.querySelector('.clear')
+const array = [
+    {
+        name: 'item 1',
+        body: 'body of item 1',
+    },
+    {
+        name: 'item 2',
+        body: 'body of item 2',
+    },
+    {
+        name: 'item 3',
+        body: 'body of item 3',
+    },
+];
 
-let intervalID
-
-function shuffleStart() { 
-    if (!intervalID) {
-        intervalID = setInterval(colorShuffle,50)
-    }
+function addPost(post) {
+    setTimeout(() => {
+        array.push(post);
+    }, 1000);
 }
-function colorShuffle() {
-    document.querySelector('.main').classList.toggle('main-color')
-}       
-function shuffleStop() {
-    clearInterval(intervalID);
- }
-// console.log(document.querySelector('.main-color').className)
-startbtn.addEventListener('click', shuffleStart)
-stopbtn.addEventListener('click',shuffleStop)
+
+function getPosts() {
+    setTimeout(() => {
+        array.forEach(function (post) {
+            const div = document.createElement('div');
+            div.style.display = 'flex';
+            div.style.flexDirection = 'column';
+            div.innerHTML = `<strong>${post.name}</strong> - ${post.body}<br>`;
+            document.querySelector('.form').appendChild(div);
+        });
+    }, 2000);
+}
+addPost({ name: 'blah', body: 'buhahahaha' });
+getPosts();
+//! setinterval and clearinterval
+//! Kann adich povm
+// const startbtn = document.querySelector('.submit')
+// const stopbtn = document.querySelector('.clear')
+
+// let intervalID
+
+// function shuffleStart() {
+//     if (!intervalID) {
+//         intervalID = setInterval(colorShuffle,100)
+//     }
+// }
+// function colorShuffle() {
+//     // document.querySelector('.main').classList.toggle('main-color')
+//     const randomcolor = Math.floor(Math.random() * 16777215).toString(16)
+//     document.body.style.backgroundColor=`#${randomcolor}`
+// }
+// function shuffleStop() {
+//     clearInterval(intervalID);
+//  }
+// // console.log(document.querySelector('.main-color').className)
+// startbtn.addEventListener('click', shuffleStart)
+// stopbtn.addEventListener('click',shuffleStop)
 //!Asynchronous JS
 // const fun = console.log('hey suckers');
 // const time = setTimeout(fun, 10000);
