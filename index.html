@@ -5,15 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="style.css" />
-        <script src="tutorial.js"></script>
+        <!-- <script src="tutorial.js"></script> -->
     </head>
 
     <body>
         <div id="main" class="blheblhe">
-            <h1>Hey this is good</h1>
-            <a href="http://google.com">blahblahb</a>
-            <script src="script.js"></script>
-            
+            <h1>The main heading</h1>
+            <div class="parent">    
+                <div class="child">child ele1</div>
+                <div class="child child2">child ele2</div>
+                <div class="child">child ele3</div>
+            </div>
+            <div class="list">
+                <ul>
+                    <li>
+                        Apple <button class="remove-item btn-link">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </li>
+                    <li>
+                        Banana <button class="remove-item btn-link">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </li>
+                    <li>
+                        Orange <button class="remove-item btn-link">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

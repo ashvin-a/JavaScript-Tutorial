@@ -1,40 +1,30 @@
-/* :root{
-    row : "4";
-
-
-} */
-
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-/* .main{
+#main {
     display: flex;
-    color: black;
     flex-direction: column;
-} */
-
-.heading{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    color: black;
+    margin: 10px;
+    padding-left: 10px;
 }
-table {
-    /* display: inline-block; */
-    /* margin: 10px; */
-    border: 0.25px solid rgb(0, 0, 0);
-    margin: 0.5rem auto;
-    margin: 10px 20px;;
+#main h1{
+    display: block;
+    padding-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 1;
 
-    /* position: absolute; */
-    /* left: 30px; */
-    /* width: fit-content */
-    /* overflow-x: scroll ; */
-  }
-tr{
-    height: 100px;
-    /* width: ; */
 }
-/* td{
-    width: 100px;
-} */
+.parent,
+.child,.list {
+    color: black;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.list{
+    padding-left: 10px;
+    padding:10px;
+}
