@@ -1,9 +1,31 @@
+//! Keyboard events
+
+
+
+
+//!Event Object
+//! target,currentTarget,type,timeStamp,clientX,clientY,preventDefault(),
+// const submit = document.querySelector('.button')
+// const heading = document.querySelector('.main h1')
+
+// onClick = (e) => console.log(e.target)
+// onDrag=(e)=>document.querySelector('.child2').textContent=`X=${e.offsetX} Y=${e.offsetY}`
+
+// submit.addEventListener('click',onClick)
+// heading.addEventListener('drag',onDrag)
+//!click,dblclick,contextmenu(rigth click),mousedown(hold),mouseup(release)
+//!wheel,mouse over,mouseout,drag start,drag,dragend
+
 //!Event handlers
-
-
-
-
-
+// const clear = document.querySelector('.clear')
+// const submit = document.querySelector('.submit')
+// const form_things=document.querySelectorAll('.form-ele')
+// const onClear = () => alert('clearing form')
+// const removeAll = ()=> document.querySelector('.form').innerHTML='' //!cool
+// const removeAll = () => form_things.forEach((item)=>item.remove())
+// clear.addEventListener('click', onClear)
+// submit.addEventListener('click', removeAll)
+// setTimeout(()=>clear.click(),5000) //! Timed alerts
 
 //! Styling using DOM
 
