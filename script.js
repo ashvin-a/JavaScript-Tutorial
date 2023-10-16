@@ -1,8 +1,41 @@
+//! setinterval and clearinterval
+
+const startbtn = document.querySelector('.submit')
+const stopbtn = document.querySelector('.clear')
+
+let intervalID
+
+function shuffleStart() { 
+    if (!intervalID) {
+        intervalID = setInterval(colorShuffle,50)
+    }
+}
+function colorShuffle() {
+    document.querySelector('.main').classList.toggle('main-color')
+}       
+function shuffleStop() {
+    clearInterval(intervalID);
+ }
+// console.log(document.querySelector('.main-color').className)
+startbtn.addEventListener('click', shuffleStart)
+stopbtn.addEventListener('click',shuffleStop)
+//!Asynchronous JS
+// const fun = console.log('hey suckers');
+// const time = setTimeout(fun, 10000);
+
+// document.querySelector('.button').addEventListener('click', () => {
+//     console.log(time);
+//     clearTimeout(time);
+//     console.log('timer cancelled');
+//});
+//! To stop event bubbling, use stopPropogation() & stopImmediatePropogation()!!!
+
 //! Keyboard events
+//! keypress, keyup,keydown,key,keycode,code
+// const form_element=document.querySelector('.form-ele')
+// const key = (e) => { console.log(e.key) }
 
-
-
-
+// form_element.addEventListener('keydown',key)
 //!Event Object
 //! target,currentTarget,type,timeStamp,clientX,clientY,preventDefault(),
 // const submit = document.querySelector('.button')
@@ -31,11 +64,11 @@
 
 // const para = document.querySelector('.para')
 // function onth() {
-    // if (para.className === 'para') {
-    //     para.className='para dark'
-    // } else if (para.className === 'para dark') {
-    //     para.className='para'
-    // }//!OR
+// if (para.className === 'para') {
+//     para.className='para dark'
+// } else if (para.className === 'para dark') {
+//     para.className='para'
+// }//!OR
 //     para.classList.toggle('dark')//!Amazing alternative toggle,add,remove,replace
 // }
 
@@ -47,7 +80,7 @@
 // function removeThis(itemno) {
 //     const parent = document.querySelector('.parent')
 //     const child = document.querySelector(`.child:nth-child(${itemno})`)
-    
+
 //     parent.removeChild(child)
 // }
 // removeThis(2)
@@ -62,7 +95,7 @@
 // secondItem.outerHTML = '<li>inserted via outer html</li>'
 //!Replacing all elements in list
 // const li_all = document.querySelectorAll('li')
-// li_all.forEach(function (item) { 
+// li_all.forEach(function (item) {
 //     item.outerHTML='<li>Replaced all of it</li>'
 // })
 //! ReplaceChild
