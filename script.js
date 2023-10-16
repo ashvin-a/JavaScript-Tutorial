@@ -1,19 +1,87 @@
+//!Event handlers
+
+
+
+
+
+
+//! Styling using DOM
+
+// const para = document.querySelector('.para')
+// function onth() {
+    // if (para.className === 'para') {
+    //     para.className='para dark'
+    // } else if (para.className === 'para dark') {
+    //     para.className='para'
+    // }//!OR
+//     para.classList.toggle('dark')//!Amazing alternative toggle,add,remove,replace
+// }
+
+// document.querySelector('.button').onclick = onth;
+
+//! Remove
+
+// ul.removeChild(li)
+// function removeThis(itemno) {
+//     const parent = document.querySelector('.parent')
+//     const child = document.querySelector(`.child:nth-child(${itemno})`)
+    
+//     parent.removeChild(child)
+// }
+// removeThis(2)
+
+//!Replace
+// const firstItem = document.querySelector('li:first-child');
+// const li = document.createElement('li');
+// li.textContent = 'Inserted using replace function';
+// firstItem.replaceWith(li)
+//! Using outer html
+// const secondItem = document.querySelector('li:nth-child(2)')
+// secondItem.outerHTML = '<li>inserted via outer html</li>'
+//!Replacing all elements in list
+// const li_all = document.querySelectorAll('li')
+// li_all.forEach(function (item) { 
+//     item.outerHTML='<li>Replaced all of it</li>'
+// })
+//! ReplaceChild
+// const parent = document.querySelector('#main')
+// const child = document.querySelector('#main h1')
+
+// const h2 = document.createElement('h2')
+// h2.textContent = 'Kochu heading aan'
+// parent.replaceChild(h2,child)
+
+//! Challenge#9 custom insertAfter function.
+// function insertAfter(new_element, reference_element) {
+//     const next_ele = reference_element.nextElementSibling;
+//     const parent = reference_element.parentElement;
+//     parent.insertBefore(new_element, next_ele);
+//! OR reference_element.parentElement.insertBefore(new_element, reference_element.nextElementSibling);
+//}
+// const li = document.createElement('li');
+// li.textContent = 'Inserted using custom function';
+
+// const firstItem = document.querySelector('li:first-child');
+// console.log(firstItem)
+//! I did it bitches!
+// insertAfter(li, firstItem);
+
 //! insertAdjacentElement/Text/HTML
-function insertElement() {
-    const list = document.querySelector('.list');
+// function insertElement() {
+//     const list = document.querySelector('.list');
 
-    const h2 = document.createElement('h2');
-    h2.textContent = 'inserted here!!';
+//     const h2 = document.createElement('h2');
+//     h2.textContent = 'inserted here!!';
 
-    list.insertAdjacentElement('afterbegin', h2);
-}
+//     list.insertAdjacentElement('afterbegin', h2);
+// }
 
-function insertElement2() {
-    const child = document.querySelector('li:first-child');
-    child.insertAdjacentText('beforebegin', 'blaaah');
-}
-insertElement();
-insertElement2();
+// function insertElement2() {
+//     const child = document.querySelector('li:first-child');
+//     child.insertAdjacentText('beforebegin', 'blaaah');
+// }
+// insertElement();
+// insertElement2();
 // console.log(document.querySelector('li:first-child'))
 //! createElement()
 // function addListItem(item) {

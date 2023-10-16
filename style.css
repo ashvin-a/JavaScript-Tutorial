@@ -28,3 +28,19 @@
     padding-left: 10px;
     padding:10px;
 }
+.para{
+    display: flex;
+    padding: 10px;
+    text-align: justify;
+}
+.dark{
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.button{
+    width: 100px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
