@@ -1,4 +1,5 @@
-
+//!Typicode Project...in typicode todos/script.js
+// const apilink = 'https://jsonplaceholder.typicode.com/todos'
 
 //!https://jsonplaceholder.typicode.com/posts
 //! Lets send something to an API
