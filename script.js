@@ -1,39 +1,276 @@
-//! Callbacks
 
-const array = [
-    {
-        name: 'item 1',
-        body: 'body of item 1',
-    },
-    {
-        name: 'item 2',
-        body: 'body of item 2',
-    },
-    {
-        name: 'item 3',
-        body: 'body of item 3',
-    },
-];
 
-function addPost(post) {
-    setTimeout(() => {
-        array.push(post);
-    }, 1000);
-}
+//!https://jsonplaceholder.typicode.com/posts
+//! Lets send something to an API
+//! How to send request to your own backend API.
 
-function getPosts() {
-    setTimeout(() => {
-        array.forEach(function (post) {
-            const div = document.createElement('div');
-            div.style.display = 'flex';
-            div.style.flexDirection = 'column';
-            div.innerHTML = `<strong>${post.name}</strong> - ${post.body}<br>`;
-            document.querySelector('.form').appendChild(div);
-        });
-    }, 2000);
-}
-addPost({ name: 'blah', body: 'buhahahaha' });
-getPosts();
+// function createPost({id, title, body}) { //! Destructering 
+//     fetch('https://jsonplaceholder.typicode.com/posts', {
+//         method: 'POST',
+//         body: JSON.stringify({
+//             id,
+//             title,
+//             body,
+//         }),
+//         headers:{
+//             'Content-type':'application/json',
+//             'token':'abc123'
+//         }
+//     }).then((res)=>res.json())
+//     .then((data)=>console.log(data))
+// }
+
+// createPost({id:'123',title:'blaah',body:'blaah inte body'})
+
+//! Fetch APIs and others
+
+// fetch('https://api.github.com/users/ashvin-a')
+// .then((response)=>response.json())
+// .then((data)=>document.querySelector('h1').textContent=data.login)
+
+//! Promise.all()
+// function openSesame(endpoint) {
+//     return new Promise((resolve, reject) => {
+//         const xhr = new XMLHttpRequest();
+//         xhr.open('GET', endpoint);
+
+//         xhr.onreadystatechange = function () {
+//             if (this.readyState === 4) {
+//                 if (this.status === 200) {
+//                     resolve(JSON.parse(this.responseText));
+//                 } else {
+//                     reject('Something went wrong');
+//                 }
+//             }
+//         };
+//         setTimeout(() => {
+//             xhr.send();
+//         }, Math.floor(Math.random() * 3000) + 1000);
+//     });
+// }
+
+// const dummy = new Promise((resolve,reject)=>{
+//     let error = false
+//     if(!error){
+//         resolve('Hey there')
+//     }else{
+//         reject('ombi ombi')
+//     }
+// })
+// const pokemon = openSesame('./pokemon.json');
+// const actors = openSesame('./actors.json');
+// const movie = openSesame('./movie.json');
+// Promise.all([pokemon, actors, movie,dummy]) //!Dont forget to add square brackets
+// .then((data) => {
+//     console.log(data);
+// }).catch((error)=>{
+//     console.log(error)
+// })
+//! Promise chaining
+// const prom = new Promise((respond,reject)=>{
+//     setTimeout(()=>{
+//         let error = false
+//         if(!error){
+//             respond({name:'Bob',age:69})
+//         }else{
+//             reject('Something went wrong')
+//         }
+//     },1000)
+// }).then((user)=>{
+//     console.log('We are in the console')
+//     console.log(user)
+//     return user.name
+// }).then((name)=>{
+//     console.log(name)
+//     newname = name.toUpperCase()
+//     return newname
+// }).then((capname)=>{
+//     console.log(capname)
+//     return capname.length
+// }).then((num)=>{
+//     console.log(num)
+// }).catch((error)=>{
+//     console.log(error)
+// })
+
+//! Callbacks to Promises
+// const array = [
+//     {
+//         name: 'item 1',
+//         body: 'body of item 1',
+//     },
+//     {
+//         name: 'item 2',
+//         body: 'body of item 2',
+//     },
+//     {
+//         name: 'item 3',
+//         body: 'body of item 3',
+//     },
+// ];
+
+// function addPost(post) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             let error = true;
+//             if (!error) {
+//                 console.log('Working fine ');
+//                 array.push(post);
+//                 resolve();
+//             } else {
+//                 reject('Something thechu');
+//             }
+//         }, 1000);
+//     });
+// }
+
+// function getPosts() {
+//     setTimeout(() => {
+//         array.forEach(function (post) {
+//             const div = document.createElement('div');
+//             div.style.display = 'flex';
+//             div.style.flexDirection = 'column';
+//             div.style.textAlign = 'right';
+//             div.innerHTML = `<strong>${post.name}</strong>${post.body}<br>`;
+//             document.querySelector('.form').appendChild(div);
+//         });
+//     }, 100);
+// }
+
+// const errorHandle=(error)=>{
+//     const err = document.createElement('h3')
+//     err.innerHTML = `<strong>${error}</strong>`
+//     document.querySelector('.form').appendChild(err)
+// }
+// addPost({ name: 'blah', body: 'buhahaha' }).then(getPosts).catch(errorHandle);
+
+//! Error catching in promises
+// let error = false;
+
+// const prom1 = new Promise((resolve, reject) => {
+//     console.log('hey there');
+//     if (!error) {
+//         resolve(console.log('Success statement'));
+//     } else {
+//         reject(console.log('Error statement'));
+//     }
+// })
+//     .then(() => {
+//         console.log('statement after success');
+//     })
+//     .catch(() => {
+//         console.log('Oombi...');
+//     });
+
+//! Promises
+
+// const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log('promise started');
+//         resolve();
+//     }, 10);
+// });
+// const pra = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log('promise 2 started');
+//         resolve();
+//     }, 1000);
+// });
+// promise.then(()=>
+//     console.log('some shit happened')
+// )
+// pra.then(()=>
+//     console.log('promise 2 happened')
+// )
+// console.log('hello')
+//! Joke generator
+// const jokebtn = document.querySelector('.json-text button');
+// const joke_contain = document.createElement('li');
+// document.querySelector('.json-text').appendChild(joke_contain)
+
+// joke_contain.style.margin='10px'
+
+// const generateJoke = () => {
+//     // console.log(1)
+//     const xhr = new XMLHttpRequest();
+//     xhr.open('GET', 'https://api.chucknorris.io/jokes/random');
+
+//     xhr.onreadystatechange = function () {
+//         if (this.readyState === 4 && this.status === 200) {
+//             const data = JSON.parse(this.responseText);
+//             joke_contain.innerHTML = `<em>${data.value}</em>`;
+
+//         }else{
+//             joke_contain.innerHTML = `<strong>Innathekk mathi!</strong>`;
+//         }
+//     };
+//     xhr.send();
+// };
+// jokebtn.addEventListener('click', generateJoke);
+// document.addEventListener('DOMContentLoaded',generateJoke)
+
+//! XHR
+// const xhr = new XMLHttpRequest();
+
+// xhr.open('GET', 'https://api.github.com/users/ashvin-a/repos');
+
+// //TODO 0 - request not initiated
+// //TODO 1 - server communication  established
+// //TODO 2 - request received
+// //TODO 3 - processingrequest
+// //TODO 4 - request finished and response ready
+
+// xhr.onreadystatechange = function () {
+//     if (this.readyState === 4 && this.status === 200) {
+// console.log(JSON.parse(this.responseText))
+//         const output = JSON.parse(this.responseText);
+
+//         output.forEach((repo) => {
+//             const li = document.createElement('li');
+//             li.innerHTML = `<strong>${repo.name}</strong> - ${repo.description}`;
+//             document.querySelector('.json-text').appendChild(li);
+//         });
+//     }
+// };
+
+// xhr.send();
+// ! Callbacks
+
+// const array = [
+//     {
+//         name: 'item 1',
+//         body: 'body of item 1',
+//     },
+//     {
+//         name: 'item 2',
+//         body: 'body of item 2',
+//     },
+//     {
+//         name: 'item 3',
+//         body: 'body of item 3',
+//     },
+// ];
+
+// function addPost(post, cb) { //! see how to use callbacks
+//     setTimeout(() => {
+//         array.push(post);
+//         cb();
+//     }, 1000);
+// }
+
+// function getPosts() {
+//     setTimeout(() => {
+//         array.forEach(function (post) {
+//             const div = document.createElement('div');
+//             div.style.display = 'flex';
+//             div.style.flexDirection = 'column';
+//             div.innerHTML = `<strong>${post.name}</strong> - ${post.body}<br>`;
+//             document.querySelector('.form').appendChild(div);
+//         });
+//     }, 100);
+// }
+// ;
+// addPost({ name: 'blah', body: 'buhahahaha' },getPosts);
 //! setinterval and clearinterval
 //! Kann adich povm
 // const startbtn = document.querySelector('.submit')
@@ -47,14 +284,14 @@ getPosts();
 //     }
 // }
 // function colorShuffle() {
-//     // document.querySelector('.main').classList.toggle('main-color')
+// document.querySelector('.main').classList.toggle('main-color')
 //     const randomcolor = Math.floor(Math.random() * 16777215).toString(16)
 //     document.body.style.backgroundColor=`#${randomcolor}`
 // }
 // function shuffleStop() {
 //     clearInterval(intervalID);
 //  }
-// // console.log(document.querySelector('.main-color').className)
+// console.log(document.querySelector('.main-color').className)
 // startbtn.addEventListener('click', shuffleStart)
 // stopbtn.addEventListener('click',shuffleStop)
 //!Asynchronous JS
