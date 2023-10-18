@@ -1,28 +1,24 @@
+//! Cookies
+// document.cookie="cookieName = cookieValue; expires=Sun, 27 Oct 2023 12:00:00 UTC; path=/";
+// console.log(document.cookie)
+
 //! Geolocation API
-function posSuccess(pos){
-    const coord = pos.coords
-    console.log(`latitude:${coord.latitude}`)
-    console.log(`longitude:${coord.longitude}`)
-    console.log(`accuracy:${coord.accuracy}`)
-}
+// function posSuccess(pos){
+//     const coord = pos.coords
+//     console.log(`latitude:${coord.latitude}`)
+//     console.log(`longitude:${coord.longitude}`)
+//     console.log(`accuracy:${coord.accuracy}`)
+// }
 
-function posError(error){
-    console.log(error)
-}
+// function posError(error){
+//     console.log(error)
+// }
 
-const posOption = {
-    enableHighAccuracy : true
-}
-navigator.geolocation.getCurrentPosition(posSuccess,posError,posOption)
+// const posOption = {
+//     enableHighAccuracy : true
+// }
+// navigator.geolocation.getCurrentPosition(posSuccess,posError,posOption)
 //! Canvas API
-
-
-
-
-
-
-
-
 
 //! Same thing using fetch
 //! Make sure to put await on both fetch and .json()
@@ -414,27 +410,27 @@ navigator.geolocation.getCurrentPosition(posSuccess,posError,posOption)
 // addPost({ name: 'blah', body: 'buhahahaha' },getPosts);
 //! setinterval and clearinterval
 //! Kann adich povm
-// const startbtn = document.querySelector('.submit')
-// const stopbtn = document.querySelector('.clear')
+// const startbtn = document.querySelector('.submit');
+// const stopbtn = document.querySelector('.clear');
 
-// let intervalID
+// let intervalID;
 
 // function shuffleStart() {
 //     if (!intervalID) {
-//         intervalID = setInterval(colorShuffle,100)
+//         intervalID = setInterval(colorShuffle, 50);
 //     }
 // }
 // function colorShuffle() {
-// document.querySelector('.main').classList.toggle('main-color')
-//     const randomcolor = Math.floor(Math.random() * 16777215).toString(16)
-//     document.body.style.backgroundColor=`#${randomcolor}`
+//     document.querySelector('.main').classList.toggle('main-color');//Adich pona code
+//     const randomcolor = Math.floor(Math.random() * 16777215).toString(16);
+//     document.body.style.backgroundColor = `#${randomcolor}`;
 // }
 // function shuffleStop() {
 //     clearInterval(intervalID);
-//  }
-// console.log(document.querySelector('.main-color').className)
-// startbtn.addEventListener('click', shuffleStart)
-// stopbtn.addEventListener('click',shuffleStop)
+// }
+// console.log(document.querySelector('.main').classList);
+// startbtn.addEventListener('click', shuffleStart);
+// stopbtn.addEventListener('click', shuffleStop);
 //!Asynchronous JS
 // const fun = console.log('hey suckers');
 // const time = setTimeout(fun, 10000);
