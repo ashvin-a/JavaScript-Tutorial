@@ -1,3 +1,142 @@
+//! Geolocation API
+function posSuccess(pos){
+    const coord = pos.coords
+    console.log(`latitude:${coord.latitude}`)
+    console.log(`longitude:${coord.longitude}`)
+    console.log(`accuracy:${coord.accuracy}`)
+}
+
+function posError(error){
+    console.log(error)
+}
+
+const posOption = {
+    enableHighAccuracy : true
+}
+navigator.geolocation.getCurrentPosition(posSuccess,posError,posOption)
+//! Canvas API
+
+
+
+
+
+
+
+
+
+//! Same thing using fetch
+//! Make sure to put await on both fetch and .json()
+
+// async function fetchEmAll(){
+//     const pokemon = await fetch('./json/pokemon.json')
+//     const poke_data = await pokemon.json()
+//     const actors = await fetch('./json/actors.json')
+//     const actor_data = await actors.json()
+//     const movie = await fetch('./json/movie.json')
+//     const movie_data = await movie.json()
+
+//     console.log(poke_data,actor_data,movie_data)
+// }
+// fetchEmAll()
+
+//! Multiple promises using try catch
+
+// function openSesame(endpoint) {
+//     return new Promise((resolve, reject) => {
+//         const xhr = new XMLHttpRequest();
+//         xhr.open('GET', endpoint);
+
+//         xhr.onreadystatechange = function () {
+//             if (this.readyState === 4) {
+//                 if (this.status === 200) {
+//                     resolve(JSON.parse(this.responseText));
+//                 } else {
+//                     reject('Something went wrong');
+//                 }
+//             }
+//         };
+//         setTimeout(() => {
+//             xhr.send();
+//         }, Math.floor(Math.random() * 30) + 1000);
+//     });
+// }
+
+// async function openAllSesame() {
+//     const pokemon = await openSesame('./json/pokemon.json');
+//     const actors = await openSesame('./json/actors.json');
+//     const movie = await openSesame('./json/movie.json');
+//     console.log(actors, pokemon, movie);
+// }
+// openAllSesame();
+
+//! Try catch
+
+// function checkNum(num) {
+//     if (isNaN(num)) {
+//         throw new Error(num + ' is not a number');
+//     } else {
+//         console.log(num + ' is a number');
+//     }
+// }
+
+// try {
+//     const out = checkNum(balabala);
+//     console.log(out);
+// } catch (error) {
+//     console.log(error);
+// }
+
+// console.log(isNaN('ask'))//! isNan return true if its not a number
+
+//! How to use Async in Arrow functions
+
+// const someName = async () => {
+//     const fet = await fetch('https://jsonplaceholder.typicode.com/posts');
+//     const data = await fet.json();
+//     console.log(data);
+// };
+
+// someName();
+
+//! How to use Async & Await with Fetch API
+
+// async function howtoFetch() {
+//     const fetc = await fetch('https://jsonplaceholder.typicode.com/users');
+//     const data = await fetc.json();
+//     console.log(data);
+// }
+
+// howtoFetch(); //*Much more neat I must say.....
+
+//! Async and Await
+
+// const promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve({ name: 'Ash', title: 'blah' });
+//     }, 1000);
+// });
+
+// async function asyncFunction() {
+//     const response = await promise;
+//     console.log(response);
+// }
+
+// asyncFunction();
+//!How to check for status using fetch API
+
+// fetch('https://uiwoeiurowieurwoe.com/')
+//     .then((res) => {
+//         if (!res.ok) {
+//             console.log('messed up');
+//             console.log(res.status);
+//         } else {
+//             console.log('mess up aayillaa');
+//         }
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     });
+
 //!Typicode Project...in typicode todos/script.js
 // const apilink = 'https://jsonplaceholder.typicode.com/todos'
 
@@ -5,7 +144,7 @@
 //! Lets send something to an API
 //! How to send request to your own backend API.
 
-// function createPost({id, title, body}) { //! Destructering 
+// function createPost({id, title, body}) { //! Destructering
 //     fetch('https://jsonplaceholder.typicode.com/posts', {
 //         method: 'POST',
 //         body: JSON.stringify({
@@ -55,7 +194,7 @@
 //     if(!error){
 //         resolve('Hey there')
 //     }else{
-//         reject('ombi ombi')
+//         reject('hambi hambo')
 //     }
 // })
 // const pokemon = openSesame('./pokemon.json');
@@ -160,7 +299,7 @@
 //         console.log('statement after success');
 //     })
 //     .catch(() => {
-//         console.log('Oombi...');
+//         console.log('Ded...');
 //     });
 
 //! Promises
@@ -178,7 +317,7 @@
 //     }, 1000);
 // });
 // promise.then(()=>
-//     console.log('some shit happened')
+//     console.log('some happened')
 // )
 // pra.then(()=>
 //     console.log('promise 2 happened')
@@ -192,7 +331,7 @@
 // joke_contain.style.margin='10px'
 
 // const generateJoke = () => {
-//     // console.log(1)
+// console.log(1)
 //     const xhr = new XMLHttpRequest();
 //     xhr.open('GET', 'https://api.chucknorris.io/jokes/random');
 
@@ -271,6 +410,7 @@
 //     }, 100);
 // }
 // ;
+
 // addPost({ name: 'blah', body: 'buhahahaha' },getPosts);
 //! setinterval and clearinterval
 //! Kann adich povm

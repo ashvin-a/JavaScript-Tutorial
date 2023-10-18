@@ -2,14 +2,6 @@
 
 const apilink = 'https://jsonplaceholder.typicode.com/todos';
 
-const getData = () => {
-    fetch(apilink + '?_limit=10')
-        .then((res) => res.json())
-        .then((data) => {
-            data.forEach((todos) => makeDOM(todos));
-        });
-};
-
 const makeDOM = (todos) => {
     const div = document.createElement('div');
     div.classList.add('todo');
@@ -19,6 +11,14 @@ const makeDOM = (todos) => {
         div.classList.add('done');
     }
     document.querySelector('#todo-list').appendChild(div);
+};
+
+const getData = () => {
+    fetch(apilink + '?_limit=10')
+        .then((res) => res.json())
+        .then((data) => {
+            data.forEach((todos) => makeDOM(todos));
+        });
 };
 
 const createTodo = (e) => {
@@ -39,14 +39,11 @@ const createTodo = (e) => {
         .then((data) => makeDOM(data));
 };
 
-const deleteTodo = (e) => {
+const changeState = (e) => {
     if (e.target.classList.contains('todo')) {
-        const id = e.target.dataset.id
-        
-        fetch(`${apilink}/${id}`,{
-            method:'DELETE'
-        }).then((res)=>res.json).then(e.target.remove())
+        e.target.classList.toggle('done');
     }
+    updateTodo(e.target.dataset.id, e.target.classList.contains('done'));
 };
 
 const updateTodo = (id, completed) => {
@@ -57,16 +54,21 @@ const updateTodo = (id, completed) => {
     })
 };
 
-const changeState = (e) => {
+const deleteTodo = (e) => {
+    e.preventDefault()
     if (e.target.classList.contains('todo')) {
-        e.target.classList.toggle('done');
+        const id = e.target.dataset.id
+        
+        fetch(`${apilink}/${id}`,{
+            method:'DELETE'
+        }).then((res)=>res.json).then(e.target.remove())
     }
-    updateTodo(e.target.dataset.id, e.target.classList.contains('done'));
 };
+
 const init = () => {
     document.addEventListener('DOMContentLoaded', getData);
     document.querySelector('#todo-form').addEventListener('submit', createTodo);
-    document.querySelector('#todo-list').addEventListener('wheel', deleteTodo); //Dont know why but dblClick is not working
+    document.querySelector('#todo-list').addEventListener('dblclick', deleteTodo); //Dont know why but dblClick is not working
     document.querySelector('#todo-list').addEventListener('click', changeState);
 };
 
