@@ -28,7 +28,8 @@ input[type='text'] {
 
 #todo-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
     margin-top: 10px;
 }
 
