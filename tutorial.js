@@ -1,9 +1,7 @@
 //!DOM.....the rest will be continued in script.js
 
-console.log(document.links[0])
-
+// console.log(document.links[0])(
 // document.body.innerHTML = '<h1>I changed it lol</h1>'
-
 
 //! Challenge#8
 // const array = ['hey', 'there', 'big', 'guy']
@@ -17,43 +15,41 @@ console.log(document.links[0])
 // const positive = array.filter(x => x > 0).reduce((acc,curr)=>acc+curr)
 // console.log(positive)
 
-
-
 // const people = [
 //     {
 //         firstname: 'dwayne',
 //         lastname: 'johnson',
 //         email: 'therock@gmail.com',
 //         age:45
-    
+
 //     },
 //     {
 //         firstname: 'john',
 //         lastname: 'wick',
 //         email: 'johnwick@gmail.com',
 //         age:35
-    
+
 //     },
 //     {
 //         firstname: 'harry',
 //         lastname: 'potter',
 //         email: 'harrypotter@gmail.com',
 //         age:25
-    
+
 //     },
 //     {
 //         firstname: 'peter',
 //         lastname: 'parker',
 //         email: 'peterparker@gmail.com',
 //         age:23
-    
+
 //     },
 //     {
 //         firstname: 'gwen',
 //         lastname: 'stacy',
 //         email: 'gwenstacy@gmail.com',
 //         age:22
-    
+
 //     },
 // ]
 
@@ -61,7 +57,7 @@ console.log(document.links[0])
 //     .map(pp => ({
 //         name: pp.firstname + ' ' + pp.lastname,
 //         email: pp.email,
-            
+
 // }))
 // console.log(youngppl)
 
@@ -190,12 +186,11 @@ console.log(document.links[0])
 // const minMax = (...numbers) => ` Min is ${Math.min(...numbers)}. Max is ${Math.max(...numbers)}`;
 // console.log(minMax(1, 2, 3, 4, 5))
 
-// ((length, width) =>{
-//         const area = length * width;
-//         const out = `Area is ${area}`
-//         console.log(out)
-//     })
-//    (94,6)
+// ((length, width) => {
+//     const area = length * width;
+//     const out = `Area is ${area}`;
+//     console.log(out);
+// })(94, 6);
 //! Immediately invoke functions
 
 // (function () {
