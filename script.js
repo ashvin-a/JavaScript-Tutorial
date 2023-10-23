@@ -1,3 +1,40 @@
+//! Form validation
+const formdata = document.querySelector('#formd');
+
+function onSubmit(e) {
+    e.preventDefault();
+    const form = new FormData(formdata);
+    // console.log(form);
+
+    // const fnam = form.get('fname');
+    // const lnam = form.get('lname');
+    // const dob = form.get('dob');
+    // const what = form.get('what');
+
+    // if(fnam===''||lnam===''||dob===''||what===''){
+    //     alert('Fill all the fields')
+    //     return;
+    // }
+    // console.log(fnam,lnam,dob,what)
+
+    const entries = form.entries();
+    for (let i of entries) {
+        if (i[1] !== '') {
+            console.log(i[1]);
+        } else {
+            alert('Fill all fields');
+            return;
+        }
+    }
+}
+formdata.addEventListener('submit', onSubmit);
+//! Keyboard events
+// const keyeye = document.getElementById('inpu');
+// const printIt = (e) => {
+//     console.log(e.key);keydown,keypress,keyup
+// };
+// keyeye.addEventListener('keydown', printIt);
+
 //! Cookies
 // document.cookie="cookieName = cookieValue; expires=Sun, 27 Oct 2023 12:00:00 UTC; path=/";
 // console.log(document.cookie)
@@ -421,7 +458,7 @@
 //     }
 // }
 // function colorShuffle() {
-//     document.querySelector('.main').classList.toggle('main-color');//Adich pona code
+//     // document.querySelector('.main').classList.toggle('main-color');//Adich pona code
 //     const randomcolor = Math.floor(Math.random() * 16777215).toString(16);
 //     document.body.style.backgroundColor = `#${randomcolor}`;
 // }
