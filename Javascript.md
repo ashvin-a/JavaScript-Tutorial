@@ -1,5 +1,5 @@
 # JavaScript Language Fundementals
-Introduction
+Introductio
 Variables (var, let)
 Constants
 Arithmetical Operators
